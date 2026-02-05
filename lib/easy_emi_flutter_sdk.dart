@@ -1,5 +1,6 @@
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+library easy_emi_flutter_sdk;
+
+export 'src/logic/emi_calculator.dart';
+export 'src/models/emi_input.dart';
+export 'src/models/emi_result.dart';
+export 'src/breakdown/emi_schedule.dart';
