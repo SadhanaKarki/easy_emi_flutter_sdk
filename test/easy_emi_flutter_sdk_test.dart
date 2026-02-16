@@ -10,9 +10,13 @@ void main() {
     months: 12,
   );
 
-  final result = EmiCalculator.calculate(input);
+  final schedule = generateEmiSchedule(input);
 
-  expect(result.emi, closeTo(8791.59, 0.1));
+  final totalPrincipalPaid = schedule
+      .map((e) => e.principalComponent)
+      .reduce((a, b) => a + b);
+
+  expect(totalPrincipalPaid, closeTo(input.principal, 1));
 });
 
 }

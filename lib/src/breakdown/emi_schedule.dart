@@ -37,7 +37,7 @@ List<EmiScheduleEntry> generateEmiSchedule(EmiInput input) {
         month: month,
         principalComponent: principal,
         interestComponent: interest,
-        balance: balance < 0 ? 0 : balance,
+        balance: balance <= 0 ? 0 : balance,
       ),
     );
   }
